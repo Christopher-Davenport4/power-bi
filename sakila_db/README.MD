@@ -1,37 +1,46 @@
-# Sakila Data Storytelling
+# Sakila: Data Modeling and Visual Storytelling
 
-An independent, from-scratch project focused on two skills: dimensional data
-modeling and telling clear stories with data. I use the Sakila sample database
-as a consistent foundation and build a series of dashboards, each starting from
-a business question and an audience rather than from a chart type.
+A Power BI project built on the Sakila sample database, which models a DVD rental
+chain with stores, staff, inventory, customers, and rental transactions.
 
-Unlike guided tutorial work, every design decision here is my own and documented
-as such.
+I am using this project to work on two things: dimensional data modeling, since
+Sakila arrives as a normalized OLTP schema and turning it into a star schema is the
+exercise, and communicating findings clearly, which I am working on alongside Cole
+Nussbaumer Knaflic's *Storytelling with Data*.
 
-## Approach
-
-Each scenario follows the same order: why before what before how.
-
-1. **Why** — who the audience is and what they should do differently after seeing it.
-2. **What** — the question of the data and the comparison it implies
-   (trend, ranking, part-to-whole, relationship, distribution).
-3. **How** — the model, the Power Query shaping, the DAX, and last of all the
-   chart. The visual is an output of the message, not a starting point.
+Each scenario starts with a business question and an audience. The chart comes last
+and follows from the message rather than the other way around.
 
 ## Structure
 
-- `00-model/` — the shared foundation: Sakila extracted and shaped in Power
-  Query, modeled as a star schema, with base DAX measures validated against raw SQL.
-- `NN-<scenario>/` — one folder per story scenario, each with its dashboard and
-  a short write-up of the question, audience, and chart rationale.
+- `PROGRESS_LOG.md` — running record of decisions, findings, and open items.
+- `01-inventory-cut-list/` — first scenario. Context document, report, and
+  supporting queries.
 
-## Documentation
+Each scenario folder holds a context document written before any analysis, the
+Power BI report, and a short write-up of what the analysis found.
 
-- `MODELING_LOG.md` — grain decisions, dimension design, and the reasoning behind
-  each modeling choice.
-- Chart-decision log (in the root README, added as scenarios are built) — for each
-  visual: the one-sentence takeaway, the chart chosen, and what was rejected and why.
+Reports are built with two pages. The recommendation page carries the finding and
+is the only thing the stakeholder would see. The exploration page holds the working
+analysis, the checks I ran, and the alternatives I ruled out.
+
+## Scenarios
+
+**01. Inventory cut list.** A regional manager has to cut 200 titles from inventory
+this quarter. The question is which titles, and whether one chain-wide list works
+or whether each store needs its own. A single list built mostly from the stronger
+store's volume could gut the other store's assortment, so the analysis checks for
+that before making a recommendation.
+
+## Notes on the data
+
+The business situation in each scenario is fictional. Sakila is a sample database
+with no real stakeholders, so the audiences and decisions are constructed to fit
+what that business would plausibly face.
+
+Sakila has no acquisition cost or margin data, so everything here is measured in
+revenue or utilization rather than profit.
 
 ## Tools
 
-Power BI, Power Query (M), DAX, MySQL (Sakila). Data modeling with a star schema.
+Power BI, Power Query (M), DAX, MySQL.
