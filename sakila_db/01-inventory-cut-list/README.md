@@ -99,6 +99,41 @@ communication.
 
 ---
 
+## Findings
+
+**The cut list is 200 titles in two groups.** 111 titles fall in the bottom 200 at
+both stores. The remaining 89 are stocked at a single store and fall in that store's
+bottom 200. Every title on the list is weak in every location that carries it. None
+is removed from a store where it performs acceptably.
+
+**Reaching 200 required the second group.** Under a strict standard of weakness at
+both stores, only 111 titles qualify. Alternatives for filling the remainder were
+tested and rejected: a bottom-third guard at the other store yielded 22 eligible
+titles, and a median guard yielded 55, both short of the 89 needed and both cutting
+titles that perform acceptably somewhere. Titles stocked at a single store carry no
+such risk, and 106 qualified.
+
+**The cut line is a target, not a boundary in the data.** Revenue per copy held rises
+smoothly across the catalog with no break at or near the 200 mark. Titles immediately
+inside and outside the line are indistinguishable on performance, so 180 or 220 would
+be equally supportable.
+
+**The two stores earn nearly the same revenue while stocking different catalogs.**
+Store 1 collected 33,679.79 and store 2 collected 33,726.77, a difference of 0.14
+percent. 479 of 1,000 titles are carried at only one location. The divergence between
+the stores is in what they stock, not in what they earn.
+
+---
+
+## Deliverable
+
+The 200 titles are exported to CSV rather than rendered as a visual. A list of that
+length is a working document, filtered and worked through against physical inventory,
+which a chart does not support. It carries title, which group the title falls into,
+and revenue per copy held and copies held broken out by store.
+
+---
+
 ## Known limitations
 
 - **Uneven activity.** Rental volume is concentrated between May and August 2005,
