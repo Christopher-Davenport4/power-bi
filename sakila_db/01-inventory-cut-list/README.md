@@ -19,13 +19,6 @@ operators, so the role and the decision described here are written to fit what a
 two-store rental chain would plausibly face. The data, the measures, and the
 findings are real properties of the database.
 
-## A note on authorship
-
-I built the data model, wrote the DAX, and made the design decisions in this
-project. I used Claude to talk through modeling approaches, pressure test the
-metric choice, and draft documentation. The reasoning behind the major decisions is
-recorded in `PROJECT_CHANGES_LOG.md`.
-
 ---
 
 ## Business question
